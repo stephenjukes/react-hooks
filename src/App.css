@@ -1,0 +1,180 @@
+:root {
+  --demo-height: 50px;
+  --site-spacing: 20px;
+  --darkest-blue: #0077b6;
+  --dark-blue: 	#00b4d8;
+  --medium-blue: #90e0ef;
+  --light-blue: #caf0f8;
+  --lightest-blue: #f0f8ff;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: .5rem;
+}
+
+body {
+  padding: 20px;
+  color: #333;
+}
+
+#app {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  font-family: serif;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 60px;
+}
+
+h3 {
+  text-transform: capitalize;
+  margin: 0;
+}
+
+a,
+a:visited {
+  color: var(--darkest-blue);
+  text-decoration: none;
+}
+
+button {
+  border: 1px solid #aaa;
+  padding: 10px 15px;
+}
+
+blockquote {
+  margin-inline-start: 0;
+  padding: .5rem 1rem;
+  border-left: 5px solid #aaa;
+  border-radius: 0;
+  background: #f8f8f8;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.hook {
+  position: relative;
+}
+
+.hook a[href='#app'],
+.hook a[href='#app']:visited {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-style: italic;
+  color: var(--medium-blue);
+}
+
+.demo-container {
+  background: var(--lightest-blue);
+  border: 2px solid var(--light-blue);
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.demo-container > :not(:last-child) {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  min-height: var(--demo-height);
+}
+
+.row :not(:last-child) {
+  margin-right: var(--site-spacing);
+}
+
+.demo:not(.default-style) {
+  font: bold 20px Arial;
+}
+
+.demo:not(.default-style) :not(button) {
+  line-height: var(--demo-height);
+}
+
+.demo span {
+  line-height: var(--demo-height);
+}
+
+.label {
+  color: purple;
+}
+
+input[type=checkbox] {
+  transform: scale(2);
+  margin-right: var(--site-spacing);
+}
+
+input:not([type=checkbox], [type=radio], [type=color]) {
+  border: 1px solid gray;
+  padding: .5rem;
+}
+
+button,
+label,
+input[type=checkbox],
+input[type=submit] {
+  cursor: pointer;
+}
+
+#context .row {
+  align-items: start;
+}
+
+.theme-context {
+  display: inline-block;
+  margin: .5rem;
+  padding: .5rem;
+  border: 1px solid #aaa;
+}
+
+/* Todos */
+.todos {
+  padding: 0;
+}
+
+.todo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.todo > * {
+  margin-right: 1rem;
+}
+
+.todo button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #08f;
+}
+
+.complete {
+  color: gray;
+  text-decoration: line-through;
+}
+
+/* useCallback */
+#callback-panels {
+  display: flex;
+}
+
+#callback-panels > * {
+  flex-grow: 1;
+  padding: 0 1rem;
+}
